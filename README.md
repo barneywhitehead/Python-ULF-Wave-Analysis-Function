@@ -11,6 +11,14 @@ As part of my dissertation, I was given over 100 datasets of magnetometer readin
 I developed a function that would show the time series data alongside the same data after some signal processing and Fourier transforms.
 Given that I was working with real world datasets, taken from a very chaotic system, most of the data isn't particularly useful. 
 For this reason, I developed a function that shows the raw data alongside the analysed data, as the quality of the data can be determined largely through probing of the raw data alone. For example, there were significant dips and following volative turbulences in the raw time series dataset for almost every day, just after midday.
-Furthermore, it was also important that any specified time range could be inputted, allowing for effective slicing and analysis of the dataset at time periods where the data was visibly useable after assessing the raw data alone. A key aim of the study was also investigating the attributes of waves at dawn, midday and dusk, so I needed to assess different time periods for this reason also.
-Another key aim of the study was comparing data across different days and locations. To incorporate this, I had the function be able to take multiple datasets to compare ontop of eachother.
+Furthermore, it was also important that any specified time range could be inputted, allowing for effective slicing and analysis of the dataset at time periods where the data was visibly useable after assessing the raw data alone. A key aim of the study was also investigating the attributes of waves at dawn, midday and dusk, so I needed to assess different time periods for this reason also. Another key aim of the study was comparing data across different days and locations. To incorporate this, I had the function be able to take multiple datasets to compare ontop of eachother, with automatic labelling of imported datasets.
+
+A large part of reasoning behind the development of this function came from thinking about how Fourier Transforms can be most optimally applied to real world systems. For example, there's a trade off between accuracy and reliability when adjusting the length of inputted time series data into a Fast Fourier Transform. Input too large of a series and you'll have an inaccurate resultant plot, with all frequencies being present in a 'noisy' outputted Fourier plot. On the other hand, if you input too short of a time series, you'll be feeding the Fourier transform a smaller sample size, meaning the output Fourier Transform plot will have more defined frequencies at which the waves occur, but those waves may not be entirely representative of the other waves in the time series. For this reason, having the ability to take different sized slices of the time series array was very important. 
+
+
+
+
+
+
+
 
